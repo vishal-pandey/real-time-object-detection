@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Object Dection</title>
+	<!-- Load TensorFlow.js. This is required to use coco-ssd model. -->
+	<script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs"> </script>
+	<!-- Load the coco-ssd model. -->
+	<script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/coco-ssd"> </script>
+	<script type="text/javascript" src="index.js"></script>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+</head>
+<body>
+
+	<!-- Replace this with your image. Make sure CORS settings allow reading the image! -->
+<!-- <img id="img" src="cat.jpg"/> -->
+
+<header>
+	<h1 align="center">Real Time Object Detection</h1>
+	<span><a href="https://github.com/vishal-pandey/real-time-object-detection"><img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" width="50"></a></span>
+</header>
+<section class="container">
+	<section class="content">
+		<video id="video" autoplay="true" muted=""></video>
+		<canvas width="720" height="560" id="canvas"></canvas>
+	</section>
+</section>
+<footer>
+	<span>&copy; copyright 2020; All rights reserved</span>
+	<span><a href="https://www.vishalpandey.co.in/">https://www.vishalpandey.co.in/</a></span>
+</footer>
+
+</body>
+</html>
+
+<style type="text/css">
+	body{
+		margin: 0;
+		padding: 0;
+	}
+	header{
+		height: 10vh;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex-direction: column;
+		/*border: 1px solid black;*/
+	}
+	header h1{
+		font-size: 18px;
+		margin-bottom: 0; 
+		margin-top: 0;
+	}
+	footer{
+		height: 5vh;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex-direction: column;
+	}
+	.container{
+		width: 100vw;
+		height: 85vh;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex-direction: column;
+	}
+	.content{
+		width: 720px;
+		height: 560px;
+		position: relative;
+	}
+	video{
+		display: block;
+		position: absolute;
+	}
+	canvas{
+		/*border: 1px solid green;*/
+		position: absolute;
+	}
+</style>
