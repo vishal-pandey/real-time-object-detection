@@ -28,7 +28,6 @@ window.onload = ()=>{
 
 				document.querySelector(".content").style.height = h+"px"
 				document.querySelector(".content").style.width = w+"px"
-				
 				ctx.clearRect(0, 0, c.width, c.height)
 			    model.detect(video).then(predictions => {
 					// console.log('Predictions: ', predictions);
